@@ -11,21 +11,19 @@ I propose a command engine focused on these widgets in the vein of Wolfram Alpha
 
 The user begins by entering the command "Get data on mass of known stars" into their action bar, and recieves the following responce:
 
-![](//cc_main.png)
+![](cc_1.png)
 
 By showing the most popular commands for the current context, we are able to gererate a defacto UI that allows the user to discover some of the available commands and perform them without needing to type.
 
 The user follows up by typing "make a histogram." Since the previous commands, are used to infer the meaning of the follow-up command the user is able to use very terse and simple commands.
 
-
-
+![](cc_2.png)
 
 *"Make what I just did into a JavaScript."* I believe this command is the most interesting part of my proposal. It essentially makes it into a natural language compiler. This command will probalby be fairly complex. (One issue is that without placing requirements on how programs are structured it is difficult to tell when they finish executing. Perhaps this could still be done by tracing the commands execution and placing a done callback after the last executed statement. There is also the issue of commands that return interactive content. I don't see a way these could be compiled without the programmer adding some funtionality for recording how it is used.)
 
 Finally, the user creates a new commmand from their previous session (in theory the code generation step doesn't need to be explicitlly called to do this). This enables users without any programming expertise to create new commands by building off of other commands. 
 
-
-
+![](cc_3.png)
 
 To add a command users need to define three coponents, a trigger which is the string the user has to type in order to invoke it, a program that implements the command's behavoir, and optionally the command's context which is a set of commands that the command can only be invoked subsequent to. The trigger can contain variables like "city" in "Population of {{city}}" that will be made available to the program. (I believe that variables will cover most use cases and that regexes add unnecessairy complexity.) The JavaScript has almost no hard requirements other than it run without error when it is injected into the page. This certainly has security risks, but I propose a way to overcome them via community moderation below. The JavaScript should follow conventions, such as only doing DOM manipulation within the output element. Avoiding limiations on the JavaScript provides freedom for a variety of ways for commands to build off eachother to evolve.
 
