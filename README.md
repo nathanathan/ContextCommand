@@ -11,11 +11,11 @@ I propose a command engine focused on these widgets in the vein of Wolfram Alpha
 
 The user begins by entering the command "Get data on mass of known stars" into their action bar, and recieves the following responce:
 
+![](//cc_main.png)
 
 By showing the most popular commands for the current context, we are able to gererate a defacto UI that allows the user to discover some of the available commands and perform them without needing to type.
 
 The user follows up by typing "make a histogram." Since the previous commands, are used to infer the meaning of the follow-up command the user is able to use very terse and simple commands.
-
 
 
 
