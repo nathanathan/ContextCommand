@@ -1,5 +1,5 @@
-Context Command: A Natural Language Programming System
-======================================================
+## Context Command: A Natural Language Programming System
+
 The goal of Context Command is essentially become the Star Trek computer where everything the user says to it is a valid command. The mechanism for building it is as follows, whenever someone tries a command that doesn't work they have the ability to program the system to do what they intended. If enough people do this, unknown commands will become rare.
 
 Increasingly search engines are adding content widgets capable of responding directly to queries (e.g. googling "time in Seattle" or "current weather"). Wolfram Alpha takes this to a new level providing thousands of widgets capable of responding to a wide range of commands. Duck Duck Go has taken the step of enabling its users to create customized Instant Answers by submitting them to a github repository. By crowdsourcing their community Duck Duck Go has been able to build up [an impressive collection of functions](https://duckduckgo.com/goodies).
