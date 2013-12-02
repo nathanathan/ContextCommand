@@ -1,9 +1,9 @@
 ## Context Command
 ### A Proposal for a Natural Language Programming System
 
-The goal of Context Command is essentially become the Star Trek computer where everything the user says to it is a valid command. The mechanism for building it is as follows, whenever someone tries a command that doesn't work they have the ability to program the system to do what they intended. If enough people do this, unknown commands will become rare.
+The goal of Context Command is essentially to become the Star Trek computer where everything the user says to it is a valid command. The mechanism for building it is as follows, whenever someone tries a command that doesn't work they have the ability to program the system to do what they intended. If enough people do this, unknown commands will become rare.
 
-Increasingly search engines are adding widgets capable of responding directly to queries (e.g. googling "time in Seattle" or "current weather"). Wolfram Alpha brought this to a new level by building a "computational knowledge engine" with thousands of widgets capable of responding to a wide range of commands. Duck Duck Go has taken the step of enabling its users to create customized Instant Answer widgets by submitting them to a github repository. By crowdsourcing their community Duck Duck Go has been able to build up [an impressive collection of Instant Answers](https://duckduckgo.com/goodies).
+Increasingly search engines are adding widgets capable of responding directly to queries (e.g. googling "time in Seattle" or "current weather"). Wolfram Alpha brought this to a new level by building a "computational knowledge engine" with thousands of widgets capable of responding to a wide range of commands. Duck Duck Go has taken the step of enabling its users to create their own Instant Answer widgets by submitting them to a github repository. By crowdsourcing their community Duck Duck Go has been able to build up [an impressive collection of Instant Answers](https://duckduckgo.com/goodies).
 
 I propose a "command engine" focused on these widgets in the vein of Wolfram Alpha. However, what I propose has two features that I believe are missing in similar systems.
 
