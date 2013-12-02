@@ -50,7 +50,7 @@ I will illustrate the precedence rules with the following series of commands:
 4. tea, earl grey, hot
 5. what is it's atomic mass?
 
-When a user enters command 3 they probably mean “Which element with a similar spectrum to O is the most common?” however, we could also intrepret it as a general question and answer Hydrogen. So, if someone has defined a trigger in the context of the second command we will use that, otherwise we will look for triggers in the context of the first command, then if all else fails we will look in the top-level context.
+When a user enters command 3 they probably mean “Which element with a similar spectrum to O is the most common?” however, we could also interpret it as a general question and answer Hydrogen. So, if someone has defined a trigger in the context of the second command we will use that, otherwise we will look for triggers in the context of the first command, then if all else fails we will look in the top-level context.
 
 None of the previous commands are likely to have triggers for command 4 in their context, so it will be treated as a general command and the computer will make tea. The fifth command isn't in the context of command 4, but it could be in the context of commands 1-3. However, since its prior command is not in the context of commands 1-3, it also is not.
 
