@@ -24,7 +24,7 @@ The user follows up by typing "make a histogram." Since the previous commands ar
 
 ![](cc_2.png)
 
-*"Make what I just did into a JavaScript."* I believe this command is one of the most interesting commands that Context Command could have. It allows users to compile natural language into code. Since all the commands are just JavaScript programs, to create a program they just need to be sequentially executed. (However, there are some details that complicate things, such as determining when programs have finished executing and dealing with interactive widgets.)
+I believe *"Make what I just did into a JavaScript."* is one of the most interesting commands that Context Command could have. It allows users to compile natural language into code. Since all the commands are just JavaScript programs, to create a program they just need to be sequentially executed. (However, there are some details that complicate things, such as determining when programs have finished executing and dealing with interactive widgets.)
 
 After that, the user creates a new command from their previous session (in theory the code generation step doesn't need to be explicitly called to do this). *Using this approach, users without any programming expertise are able to program new commands using only natural language by building off of other commands.*
 
@@ -44,17 +44,17 @@ Commands may match multiple triggers. If the previous command has a matching tri
 
 I will illustrate the precedence rules with the following series of commands:
 
-1. spectrum of O
-2. elements with a similar spectrum
-3. which element is the most common?
-4. tea, earl grey, hot
-5. what is it's atomic mass?
+1. Show a map of Seattle
+2. Who is the mayor?
+3. tea, earl grey, hot
 
-When a user enters command 3 they probably mean “Which element with a similar spectrum to O is the most common?” however, we could also interpret it as a general question and answer Hydrogen. So, if someone has defined a trigger in the context of the second command we will use that, otherwise we will look for triggers in the context of the first command, then if all else fails we will look in the top-level context.
+When a user enters command 2 they probably mean “Who is the mayor of Seattle?” However, we could also interpret it as "Who is the mayor of the city where I am currently located?". According to the precedence rules, if someone has defined a trigger for "who is the mayor?" in the context of Command 1 we will use that, otherwise we will look in the top-level context where "who is the mayor?" probably means "Who is the mayor of the city where I am currently located?". None of the previous commands are likely to have triggers for command 3 in their context, so it will be treated as a general command in the top-level context and the computer will make tea.
 
-None of the previous commands are likely to have triggers for command 4 in their context, so it will be treated as a general command and the computer will make tea. The fifth command isn't in the context of command 4, but it could be in the context of commands 1-3. However, since its prior command is not in the context of commands 1-3, it also is not.
+There is no automated cleanup of the previous program. This enables subsequent commands to interoperate with previous commands by using left over data, without requiring any effort on the part of the initial command's developer. Requiring that each command store its data in a standardized location would probably have numerous benefits but that is outside of the scope of this proposal. It is left to community moderators to decide what kind of interoperation to allow.
 
-There is no automated cleanup of the previous program. This enables subsequent commands to interoperate with previous commands by scraping left over DOM elements and global variables without requiring any effort on the part of the initial command's developer. Scraping DOM elements will likely result in brittle and buggy commands. It is left to community moderators to decide what kind of interoperation to allow.
+#### Extensions to context
+
+The concept of context could be expanded beyond just being the set of previous commands. Commands could use url of webpages as part of their context. Then, by using a bookmarklet to inject a context command prompt into the current webpage, users could issue commands specifically designed for that webpage. For example, on Wikipedia they could say "highlight text that was recently modified" or on their webmail client they could say "show me the previous message from the person who sent me this".
 
 #### Command moderation
 
